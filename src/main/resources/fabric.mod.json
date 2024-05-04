@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "kubbifixer",
+	"version": "${version}",
+	"name": "KubbiFixer",
+	"description": "Fabric fixer utility mod developed for private intents.",
+	"authors": [
+		"kubbidev"
+	],
+	"contact": {
+		"homepage": "https://discord.kubbidev.com/",
+		"sources": "https://github.com/kubbidev/KubbiFixer"
+	},
+	"license": "MIT",
+	"icon": "assets/kubbifixer/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"me.kubbidev.fixer.KubbiFixer"
+		],
+		"client": [
+			"me.kubbidev.fixer.KubbiFixerClient"
+		]
+	},
+	"mixins": [
+		"kubbifixer.mixins.json",
+		{
+			"config": "kubbifixer.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
